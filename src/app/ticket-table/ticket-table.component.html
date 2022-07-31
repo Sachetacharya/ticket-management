@@ -1,0 +1,55 @@
+<div class="p-4 color">
+ 
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-11">
+      <div
+        class="row d-flex justify-content-between align-items-center pt-5 tablehead pb-3"
+      >
+        <div class="col-6">Ticket Name</div>
+        <div class="col text-end">Due Date</div>
+        <div class="col text-end">Priority</div>
+
+        <div class="col text-end">Assignee</div>
+      </div>
+      <div
+        class="row d-flex pt-2 pb-2 justify-content-between align-items-center tablebody mb-1"
+        *ngFor="let value of tickets"
+      >
+        <div class="col-6">
+          <div
+            class="name-container row d-flex justify-content-start align-items-baseline"
+          >
+            <div class="col-1">
+              <div
+                class="circular"
+                [ngStyle]="{
+                  'background-color': 
+                    value.ticket === 'Open'
+                      ? '#D3D3D3'
+                      : value.ticket === 'progress'
+                      ? '#4194F6'
+                      : value.ticket === 'Review'
+                      ? '#A875FF'
+                      : '#6BC950'
+                }"
+              ></div>
+            </div>
+            <div class="name col-11">{{ value.name }}</div>
+          </div>
+        </div>
+        <div class="col text-end">{{ value.date }}</div>
+
+        <div
+          class="col text-end"
+          [ngStyle]="{
+            color: value.Priority === 'High' ? '#C91717' : '#126C9C'
+          }"
+        >
+          {{ value.Priority }}
+        </div>
+
+        <div class="col text-end">{{ value.Priority }}</div>
+      </div>
+    </div>
+  </div>
+</div>

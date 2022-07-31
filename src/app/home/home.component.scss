@@ -1,0 +1,43 @@
+@import '../../styles.scss';
+
+
+.body{
+    background-color: #FBFDFF;
+    height: 100vh;
+}
+.head-text{
+    color: $black;
+    .welcome{
+
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .dummy-text{
+
+        font-size: 14px;
+    }
+}
+.box-wrapper{
+    position: relative;
+    background-color: #fff;
+    // height: 100px;
+    width: 240px;
+}
+.box-wrapper::before{
+    position: absolute;
+    content: '...';
+    font-size:16px ;
+    font-weight: 500;
+    top: 0px;
+    right: 12px;
+    letter-spacing: 0.02cm;
+}
+.cricle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid #EDEDF6;
+    border-left: 3px solid #287EB7;
+    border-top: 3px solid #287EB7;
+
+}

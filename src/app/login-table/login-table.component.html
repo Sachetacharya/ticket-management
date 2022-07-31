@@ -1,0 +1,101 @@
+<div class="login-table d-flex justify-content-center align-items-center">
+  <div class="col-8">
+    <div class="logo-container pb-3">
+      <div class="logo"></div>
+      <div class="log-text">
+        <span class="ticket">Ticket</span> Management System
+      </div>
+    </div>
+    <div class="start pt-2 pb-2">Lets gets Started</div>
+    <div class="Privacy pb-3">
+      By continuing you agree to our
+      <span class="user">User Agreement</span> and
+      <span class="user">Privacy policy.</span>
+    </div>
+    <div class="form-start">
+      <form [formGroup]="idForm">
+        <div class="email pt-1">
+          <div class="left">
+            <label for="email" class="pb-2" id="label-focus">
+              Mobile number or Email
+            </label>
+            <div class="lablebox">
+              <input
+                id="email"
+                type="text"
+                placeholder="Enter your email or phonenumber"
+                formControlName="email"
+                name="email"
+                required
+              />
+            </div>
+            <div
+              *ngIf="
+                getFormControl('email')?.invalid &&
+                (getFormControl('email')?.dirty ||
+                  getFormControl('email')?.touched)
+              "
+            >
+              <div  class="text-danger" *ngIf="isInputValid('email', 'required')">
+                Email is required
+              </div>
+
+              <div class="text-danger" *ngIf="isInputValid('email', 'email')">invalid email</div>
+            </div>
+          </div>
+        </div>
+        <div class="password">
+          <label for="password" class="pb-2">Password :</label>
+
+          <div class="left">
+            <input
+              placeholder="Enter your password"
+              id="password"
+              type="password"
+              formControlName="password"
+              required
+            />
+            <div
+              *ngIf="
+                getFormControl('password')?.invalid &&
+                (getFormControl('password')?.dirty ||
+                  getFormControl('password')?.touched)
+              "
+            >
+              <div
+                class="text-danger"
+                *ngIf="isInputValid('password', 'required')"
+              >
+                password is required
+              </div>
+
+              <div
+                class="text-danger"
+                *ngIf="isInputValid('password', 'pattern')"
+              >
+                invalid password
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      class="remember-password d-flex justify-content-between align-items-center"
+    >
+      <div class="form-check d-flex align-items-center">
+        <form action="" class="d-flex align-items-center">
+          <input type="checkbox" id="remember" clas />
+          <label for="remember"> Remember my username</label>
+        </form>
+      </div>
+
+      <div class="forget-password">Forgot Password ?</div>
+    </div>
+    <div class="pt-4">
+      <button class="button" type="submit" (click)="onSubmit()">
+        <div routerLink="/data">Login</div>
+      </button>
+    </div>
+  </div>
+</div>

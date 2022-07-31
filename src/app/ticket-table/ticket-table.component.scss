@@ -1,0 +1,31 @@
+@import '../../styles.scss';
+
+// $values: first, second, third, forth;
+
+
+
+
+
+
+
+
+.color {
+    color: $black;
+}
+
+
+
+.tablehead {
+    font-size: 14px;
+}
+
+.circular {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    
+}
+.tablebody{
+    background-color: #FFFFFF;
+    border-radius: 2px;
+}

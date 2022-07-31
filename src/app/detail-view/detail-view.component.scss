@@ -1,0 +1,161 @@
+@import '../../styles.scss';
+
+
+
+
+.body-bg{
+    background-color: white;
+    border-bottom:1px solid #E4E4E4 ;
+
+}
+.body{
+    background-color: white;
+}
+.img{
+    position: relative;
+    img{
+        object-fit: cover;
+        height: 40px;
+        width: 40px; border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+        
+    }
+    
+}
+
+.icon-wrapper1{
+
+    position: absolute;
+    left: 28px;
+    top: 0px;
+}
+.icon-wrapper{
+    border: 1px dashed $black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date{
+    color: #6A6A6A;
+font-size: 10px;
+}
+.open-button{
+    height: 40px;
+    width: 80px;
+    background-color: #FBFBFB;
+    text-align: center;
+    border: none;
+    color: #6A6A6A;
+}
+.open-button::after{
+    content: '\2023 ';
+    font-size: 45px;
+    color: #6A6A6A;
+   
+ 
+}
+.heading{
+    color: $black;
+    font-size: 14px;
+    font-weight: 600;
+}
+.project{
+    color: $black;
+    font-size: 16px;
+}
+.dummy{
+    color: $unnamed;
+    font-size: 12px;
+    word-spacing: 0.04cm;
+}
+.see{
+    float:right;
+    color: $lightblue;
+    cursor: pointer;
+    font-size: 14px;
+}
+.attach{
+    font-size: 14px;
+    font-weight: 500;
+}
+.all{
+    color: $lightblue;
+    font-size:12px;
+}
+.name{
+    color: $black;
+    font-size: 12px;
+}
+.data{
+    font-size: 12px;
+    color: $black;
+    img{
+        height: 50px;
+        width: 82px;
+    }
+}
+.min{
+    font-size: 12px;
+    color: $black;
+}
+.by{
+    position: relative;
+
+    img{
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        object-fit: cover;
+       
+    }
+    &::after{
+        content: '';
+        background-color: $sucess;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 20px;
+    }
+}
+.comment{
+    color: #BEBEBE;
+}
+.text-area{
+    border: 1px solid #BEBEBE;
+    height: 135px;
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+    text-indent: 10px;
+   &::placeholder{
+    color: #BEBEBE;
+   }
+}
+form:focus-within label {
+
+    color: $black;
+}
+.person{
+    color: $lightblue;
+}
+.right-description{
+    color: $unnamed;
+    font-size: 14px;
+    background-color: #FBFBFB;
+    height: 100%;
+    border-left: 1px solid  #BEBEBE;
+}
+.pdf-container{
+    img{
+        height: 69px;
+        width: 115px;
+    }
+}

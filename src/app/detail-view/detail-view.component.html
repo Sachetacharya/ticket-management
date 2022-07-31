@@ -1,0 +1,157 @@
+
+
+
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-11 first-row body-bg">
+      <div class="p-3">
+        <div class="row d-flex align-items-center justify-content-between">
+          <div class="col-7">
+            <div class="new-ticket">
+              <div class="row d">
+                <div class="col-4">
+                  <div class="ticket">New Ticket</div>
+                  <div class="date">Created Date: 2022-01-20</div>
+                </div>
+                <div class="col img-container">
+                  <div class="img">
+                    <img src="assets/profile.jpg" alt="" />
+                    <div class="icon-wrapper1">
+                      <div class="icon-wrapper">
+                        <div class="icon"><i class="fa-light fa-user"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="icon-wrapper">
+                    <div class="icon"><i class="fa-light fa-user"></i></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="icon-wrapper">
+                    <div class="icon"><i class="fa-light fa-user"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="open d-flex justify-content-evenly align-items-center">
+              <div class="icon"><i class="fa-light fa-user"></i></div>
+
+              <button
+                class="open-button d-flex justify-content-between align-items-center"
+              >
+                Open
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center ">
+    <div class="col-11 body p-4">
+      <div class="description">
+        <div class="row">
+          <div class="col-6">
+            <div class="left-description">
+              <div
+                class="row d-flex justify-content-between align-items-center"
+              >
+                <div class="col-6 project">
+                  Project:
+                  <span style="color: #126c9c"> Test Project 1 </span>
+                </div>
+                <div class="col-5">Ticked ID: 19999556</div>
+              </div>
+              <div class="row">
+                <div class="main-description pt-4">
+                  <div class="heading">Description</div>
+                  <div class="dummy pt-2">
+                    is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took a
+                    galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release
+                    of Letraset sheets containing …...
+                  </div>
+                </div>
+              </div>
+              <div class="see">See more</div>
+              <div
+                class="row d-flex justify-content-between align-items-center pt-4"
+              >
+                <div class="col-2 attach">Attachments</div>
+                <div class="col-8">
+                  <div
+                    class="icon-container d-flex align-items-center justify-content-between"
+                  >
+                    <div class="col"></div>
+                    <div class="col"></div>
+
+                    <div class="col all">Download all</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row ps-2 pt-4 d-flex justify-content-between name align-items-center"
+              >
+                <div class="col-5">Name</div>
+                <div class="col-2">Modified</div>
+
+                <div class="col-2 ps-5">By</div>
+
+                <div class="col-3 ps-5">Action</div>
+              </div>
+              <div class="row pt-2">
+                <div
+                  class="info d-flex justify-content-between align-items-center"
+                  *ngFor="let info of data"
+                >
+                  <div class="col-5 data me-2">
+                    <img src="assets/pdf.jpg" alt="" />
+                    <span>{{ info.name }}</span>
+                  </div>
+                  <div class="col-3 ps-4 min">{{ info.modified }}</div>
+                  <div class="col-2 by"><img src="{{ info.by }}" alt="" /></div>
+                  <div class="col-3"></div>
+                </div>
+              </div>
+              <div class="row pt-4">
+                <div class="col-12">
+                  <div class="comment-box">
+                    <form action="">
+                      <label for="" class="comment pb-2"> Comment</label>
+                      <textarea class=" text-area"
+                        name=""
+                        id=""
+                      
+                        placeholder="is simply dummy text of the printing and typesetting industry. Lorem Ipsum.."
+                      ></textarea>
+                    </form> 
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+          </div>
+          <div class="col-6 pt-5">
+            <div class="right-description mt-2 p-4 ">
+              <div class="row d-flex align-items-center justify-content-between" *ngFor="let info of message">
+                <div class="col-6 pb-3"><span class="person">{{info.person}}</span>{{info.message}}</div>
+                <div class="col-4 pb-3"> {{info.date}}</div>
+
+              </div>
+              <div class="row pdf-container d-flex justify-content-start align-items-center pt-4">
+                <div class="col-3"><img src="assets/pdf.jpg" alt=""></div>
+                <div class="col-3 ms-3"><img src="assets/pdf.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

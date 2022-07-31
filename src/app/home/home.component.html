@@ -1,0 +1,31 @@
+<div class="container pt-5 body" >
+  <div class="row head-text">
+    <div class="welcome">Hello, Your</div>
+    <div class="dummy-text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing.
+    </div>
+  </div>
+
+  <div class="row pt-4">
+    <div class="col pt-4" *ngFor="let value of data">
+      <div class="box-wrapper pt-4">
+        <div class="box d-flex  justify-content-between align-items-center">
+          <div class="cricle d-flex align-items-center justify-content-center"> {{value.percent}}</div>
+          <div class="text">
+            <div class="ticket">{{value.ticket}}</div>
+            <div class="number">{{value.number}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+
+    </div>
+    <div class="col-4">
+
+    </div>
+
+  </div>
+</div>

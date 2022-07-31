@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-$darkcolor: $black:$lightblue
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+$darkcolor: #126C9C;
+$black: #07223A;
+$lightblue: #126C9C;
+$unnamed:#6A6A6A;
+$sucess:#2EC64D;
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+body {
+    font-family : 'Inter', sans-serif;
+}
