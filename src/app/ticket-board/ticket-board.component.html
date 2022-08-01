@@ -1,12 +1,71 @@
 <div class="row justify-content-center d-flex align-items-center">
-    <div class="wrapper col-11">
-        <div class="row d-flex justify-content-between  align-items-center pt-4">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4" *ngFor="let value of ticketvalue">
-                <div class="{{ value.class }} ">
-                    <div class="ticket-{{ value.no }} {{ value.class }} p-2">{{ value.ticket }}</div>
-                    <div class="{{ value.class }}-value">vffdszd</div>
-                </div>
-            </div>
+  <div class="wrapper col-11">
+    <div class="row d-flex justify-content-evenly align-items-center pt-4">
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
+        *ngFor="let value of ticketvalue"
+      >
+        <div class="{{ value.class }} ">
+          <div class="ticket-{{ value.no }} {{ value.class }} m-2 p-2">
+            {{ value.ticket }}
+          </div>
         </div>
+      </div>
     </div>
-</div>n
+
+    <div class="row d-flex justify-content-evenly align-items-center">
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
+        *ngFor="let value of openTickets"
+      >
+        <div class="box-container m-2 p-2">
+          <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-6">
+              <span><input type="checkbox" name="" id=""></span><div class="toptext">{{ value.name }}</div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
+        *ngFor="let value of progressTickets"
+      >
+        <div class="box-container m-2 p-2">
+          <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-6">
+              <div class="toptext">{{ value.name }}</div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
+        *ngFor="let value of reviewTickets"
+      >
+        <div class="box-container m-2 p-2">
+          <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-6">
+              <div class="toptext">{{ value.name }}</div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
+        *ngFor="let value of closedTickets"
+      >
+        <div class="box-container m-2 p-2">
+          <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-6">
+              <div class="toptext">{{ value.name }}</div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

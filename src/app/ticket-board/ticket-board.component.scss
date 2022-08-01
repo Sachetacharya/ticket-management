@@ -20,3 +20,17 @@ $colors: #d3d3d3, #4194f6, #a875ff, #6BC950;
        
     }
 }
+
+.box-container{
+    height: 180px;
+      background-color: white;
+}
+input[type='checkbox'] {
+    accent-color: red;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+.toptext{
+    font-size: 11px;
+}

@@ -1,6 +1,6 @@
 export const Ticketvalue = [
   {
-    ticket:"Review",
+    ticket:"open",
     name: 'Bug in Backend',
     date: 'Jun 17',
     Priority: 'High',
