@@ -10,11 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { BodyComponent } from './body/body.component';
 
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';np
 import { AllTicketComponent } from './all-ticket/all-ticket.component';
 import { TicketBoardComponent } from './ticket-board/ticket-board.component';
 import { TicketTableComponent } from './ticket-table/ticket-table.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
+import { DragulaModule } from 'ng2-dragula';
+
+
 
 
 
@@ -25,7 +28,7 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     LoginTableComponent,
     HomeComponent,
     DetailViewComponent,
-    // AllTicketComponent,
+   
     BodyComponent,
     AllTicketComponent,
     TicketBoardComponent,
@@ -38,6 +41,8 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    DragulaModule.forRoot()
+
     
 
   ],

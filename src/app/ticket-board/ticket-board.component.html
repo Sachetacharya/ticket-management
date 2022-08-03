@@ -6,66 +6,259 @@
         *ngFor="let value of ticketvalue"
       >
         <div class="{{ value.class }} ">
-          <div class="ticket-{{ value.no }} {{ value.class }} m-2 p-2">
+          <div class="ticket-{{ value.no }} {{ value.class }} m-lg-2 m-sm-1 mb-4 p-2">
             {{ value.ticket }}
           </div>
         </div>
       </div>
     </div>
+    <div class="flex">
+      <div class="row d-flex justify-content-evenly align-items-start">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6 jptclass pt-4 open-value">
+          <div class="vamp" dragula="VAMPIRES" [(dragulaModel)]="openTickets">
+            <div
+              class="box-container m-lg-2 m-sm-1 mb-4 vamp"
+              *ngFor="let value of openTickets"
+            >
+              <div class="box-wrapper p-2">
+                <div class="thaili pb-2">Thaili Mobile Application</div>
+                <div
+                  class="first row d-flex align-items-center justify-content-between pb-2"
+                >
+                  <div class="wrap row d-flex align-items-start col-8">
+                    <div class="col-1">
+                      <input type="checkbox" class="checkbox-round" name="" />
+                    </div>
+                    <div class="toptext col-5 col-lg">
+                      <b>
+                        <label for="open">{{ value.name }}</label>
+                      </b>
+                    </div>
+                  </div>
+                  <div
+                    class="side col-4 text-end"
+                    [ngStyle]="{
+                      color: value.Priority === 'High' ? '#C91717' : '#126C9C'
+                    }"
+                  >
+                    {{ value.Priority }}
+                  </div>
+                </div>
+                <div
+                  class="second row d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-6 client">Client: Test 1</div>
+                  <div class="col-6 date text-end">Date:{{ value.date }}</div>
+                </div>
+                <div class="ticketid pt-2">Ticket Id:{{ value.ticketId }}</div>
+              </div>
 
-    <div class="row d-flex justify-content-evenly align-items-center">
-      <div
-        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
-        *ngFor="let value of openTickets"
-      >
-        <div class="box-container m-2 p-2">
-          <div class="row d-flex align-items-center justify-content-between">
-            <div class="col-6">
-              <span><input type="checkbox" name="" id=""></span><div class="toptext">{{ value.name }}</div>
+              <hr />
+              <div class="box-wrapper-1 ps-2 pe-2">
+                <div
+                  class="third row d-flex align-items-center justify-content-center pb-2"
+                >
+                  <div class="image-container col-6"></div>
+
+                  <div class="icon col-6 text-end">
+                    <span><i class="fa-solid fa-paperclip pe-2"></i></span>2
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-6"></div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
-        *ngFor="let value of progressTickets"
-      >
-        <div class="box-container m-2 p-2">
-          <div class="row d-flex align-items-center justify-content-between">
-            <div class="col-6">
-              <div class="toptext">{{ value.name }}</div>
+
+        <div
+          class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4 jptclass progress-value"
+        >
+          <div class="vamp" dragula="VAMPIRES" [(dragulaModel)]="progressTickets">
+            <div
+              class="box-container m-lg-2 m-sm-1 mb-4"
+              *ngFor="let value of progressTickets"
+            >
+              <div class="box-wrapper p-2">
+                <div class="thaili pb-2">Thaili Mobile Application</div>
+                <div
+                  class="first row d-flex align-items-center justify-content-between pb-2"
+                >
+                  <div class="wrap row d-flex align-items-start col-8">
+                    <div class="col-1">
+                      <input type="checkbox" class="checkbox-round" name="" />
+                    </div>
+                    <div class="toptext col-5 col-lg">
+                      <b>
+                        <label for="open">{{ value.name }}</label>
+                      </b>
+                    </div>
+                  </div>
+                  <div
+                    class="side col-4 text-end"
+                    [ngStyle]="{
+                      color: value.Priority === 'High' ? '#C91717' : '#126C9C'
+                    }"
+                  >
+                    {{ value.Priority }}
+                  </div>
+                </div>
+                <div
+                  class="second row d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-6 client">Client: Test 1</div>
+                  <div class="col-6 date text-end">Date:{{ value.date }}</div>
+                </div>
+                <div class="ticketid pt-2">Ticket Id:{{ value.ticketId }}</div>
+              </div>
+
+              <hr />
+              <div class="box-wrapper-1 ps-2 pe-2">
+                <div
+                  class="third row d-flex align-items-center justify-content-center pb-2"
+                >
+                  <div class="image-container col-6"></div>
+
+                  <div class="icon col-6 text-end">
+                    <span><i class="fa-solid fa-paperclip pe-2"></i></span>2
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-6"></div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
-        *ngFor="let value of reviewTickets"
-      >
-        <div class="box-container m-2 p-2">
-          <div class="row d-flex align-items-center justify-content-between">
-            <div class="col-6">
-              <div class="toptext">{{ value.name }}</div>
+
+        <div
+          class="col-lg-3 col-md-3 col-sm-6 jptclass col-6 pt-4 review-value"
+        >
+          <div class="vamp" dragula="VAMPIRES" [(dragulaModel)]="reviewTickets">
+            <div
+              class="box-container m-lg-2 m-sm-1 mb-4"
+              *ngFor="let value of reviewTickets"
+            >
+              <div class="box-wrapper p-2">
+                <div class="thaili pb-2">Thaili Mobile Application</div>
+                <div
+                  class="first row d-flex align-items-center justify-content-between pb-2"
+                >
+                  <div class="wrap row d-flex align-items-start col-8">
+                    <div class="col-1">
+                      <input type="checkbox" class="checkbox-round" name="" />
+                    </div>
+                    <div class="toptext col-5 col-lg">
+                      <b>
+                        <label for="open">{{ value.name }}</label>
+                      </b>
+                    </div>
+                  </div>
+                  <div
+                    class="side col-4 text-end"
+                    [ngStyle]="{
+                      color: value.Priority === 'High' ? '#C91717' : '#126C9C'
+                    }"
+                  >
+                    {{ value.Priority }}
+                  </div>
+                </div>
+                <div
+                  class="second row d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-6 client">Client: Test 1</div>
+                  <div class="col-6 date text-end">Date:{{ value.date }}</div>
+                </div>
+                <div class="ticketid pt-2">Ticket Id:{{ value.ticketId }}</div>
+              </div>
+
+              <hr />
+              <div class="box-wrapper-1 ps-2 pe-2">
+                <div
+                  class="third row d-flex align-items-center justify-content-center pb-2"
+                >
+                  <div class="image-container col-6"></div>
+
+                  <div class="icon col-6 text-end">
+                    <span><i class="fa-solid fa-paperclip pe-2"></i></span>2
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-6"></div>
           </div>
         </div>
-      </div>
-      <div
-        class="col-lg-3 col-md-3 col-sm-6 col-6 pt-4"
-        *ngFor="let value of closedTickets"
-      >
-        <div class="box-container m-2 p-2">
-          <div class="row d-flex align-items-center justify-content-between">
-            <div class="col-6">
-              <div class="toptext">{{ value.name }}</div>
+
+        <div
+          class="col-lg-3 col-md-3 col-sm-6 col-6 jptclass pt-4 closed-value"
+        >
+          <div class="vamp" dragula="VAMPIRES" [(dragulaModel)]="closedTickets">
+            <div
+              class="box-container m-lg-2 m-sm-1 mb-4"
+              *ngFor="let value of closedTickets"
+            >
+              <div class="box-wrapper p-2">
+                <div class="thaili pb-2">Thaili Mobile Application</div>
+                <div
+                  class="first row d-flex align-items-center justify-content-between pb-2"
+                >
+                  <div class="wrap row d-flex align-items-start col-8">
+                    <div class="col-1">
+                      <input type="checkbox" class="checkbox-round" name="" />
+                    </div>
+                    <div class="toptext col-5 col-lg">
+                      <b>
+                        <label for="open">{{ value.name }}</label>
+                      </b>
+                    </div>
+                  </div>
+                  <div
+                    class="side col-4 text-end"
+                    [ngStyle]="{
+                      color: value.Priority === 'High' ? '#C91717' : '#126C9C'
+                    }"
+                  >
+                    {{ value.Priority }}
+                  </div>
+                </div>
+                <div
+                  class="second row d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-6 client">Client: Test 1</div>
+                  <div class="col-6 date text-end">Date:{{ value.date }}</div>
+                </div>
+                <div class="ticketid pt-2">Ticket Id:{{ value.ticketId }}</div>
+              </div>
+
+              <hr />
+              <div class="box-wrapper-1 ps-2 pe-2">
+                <div
+                  class="third row d-flex align-items-center justify-content-center pb-2"
+                >
+                  <div class="image-container col-6"></div>
+
+                  <div class="icon col-6 text-end">
+                    <span><i class="fa-solid fa-paperclip pe-2"></i></span>2
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-6"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- <div class="flex">
+    <div class="container" class="vamp" dragula="VAMPIRES" [(dragulaModel)]="ticketvalue">
+      <div class="vamp" *ngFor="let vamp of ticketvalue">
+        {{ vamp.ticket }} {{ vamp.ticket }}
+      </div>
+    </div>
+  
+    <div class="container" class="vamp" dragula="VAMPIRES" [(dragulaModel)]="ticketvalue">
+      <div class="vamp" *ngFor="let vamp of ticketvalue">
+        {{ vamp.ticket }}
+        {{ vamp.ticket }}
+      </div>
+    </div>
+  </div> -->
+
+  <div style="font-size: 16px;">ram</div>
+  <div style="font-size: 1rem;">ram</div>
+
 </div>

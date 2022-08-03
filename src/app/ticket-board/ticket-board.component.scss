@@ -1,4 +1,3 @@
-
 @import '../../styles.scss';
 
 $colors: #d3d3d3, #4194f6, #a875ff, #6BC950;
@@ -8,29 +7,102 @@ $colors: #d3d3d3, #4194f6, #a875ff, #6BC950;
     $i: index($colors, $color);
 
     .ticket-#{$i} {
-        height: 45px;
+        // height: 45px;
         background-color: #fff;
         border-left: 5px solid $color;
         border-top: 5px solid transparent;
         border-right: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-radius: 5px;
-        font-size: 14px;
+        font-size: calc(14 / 16)px;
 
-       
+
     }
 }
+.vamp{
 
-.box-container{
-    height: 180px;
-      background-color: white;
+    min-height: 150px;
 }
+.box-container {
+    background-color: white;
+}
+
 input[type='checkbox'] {
-    accent-color: red;
+
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    appearance: none;
+    border: 2px solid #D3D3D3;
+    display: flex;
+    width: 16px;
+    outline:none;
 }
-.toptext{
+
+input:checked {
+
+    position: relative;
+   outline:none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 16px;
+}
+
+input:checked::before {
+    position: absolute;
+    content: '\2713';
+    color: #fff;    border: none;
+
+
+
+}
+.review-value input:checked{
+    background-color: #A875FF;
+
+}
+.open-value input:checked{
+    background-color: #D3D3D3;
+
+}.closed-value input:checked{
+    background-color: #6BC950;
+
+}.progress-value input:checked{
+    background-color: #4194f6;
+
+}
+
+
+// .checkbox-round {
+//     width: 1.3em;
+//     height: 1.3em;
+//     background-color: white;
+//     border-radius: 50%;
+//     vertical-align: middle;
+//     // border: 1px solid #ddd;
+//     // appearance: none;
+//     outline: none;
+//     cursor: pointer;
+// }
+
+// .checkbox-round:checked {
+//     background-color: gray;
+// }
+.toptext {
     font-size: 11px;
+    font-weight: 500;
+}
+
+.thaili,
+.side,
+.client,
+.date,.ticketid ,.icon {
+    font-size: 10px;
+    color: $black;
+}
+
+// .side{
+//     font-size: 10px;
+// }
+hr{
+    color: #E4E4E4;
 }

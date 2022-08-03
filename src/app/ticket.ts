@@ -9,7 +9,7 @@ export const Ticket = [
     no: 2,
     class: 'progressed',
 
-    ticket: 'In Progress Ticket',
+    ticket: 'Progress Ticket',
     num: 12,
   },
   { no: 3, ticket: 'Review Ticket', num: 12, class: 'review' },
