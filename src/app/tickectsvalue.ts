@@ -35,7 +35,7 @@ export const Ticketvalue = [
     ticket:"open",
     name: 'Bug in Backend',
     date: 'Jun 17',
-    Priority: 'Hilowgh',
+    Priority: 'High',
     Assignee:'',
     ticketId:200591
   },

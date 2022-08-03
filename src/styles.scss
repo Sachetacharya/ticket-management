@@ -1,43 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 
-$darkcolor: #126C9C;
-$black: #07223A;
-$lightblue: #126C9C;
-$unnamed:#6A6A6A;
-$sucess:#2EC64D;
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+$darkcolor: #126c9c;
+$black: #07223a;
+$lightblue: #126c9c;
+$unnamed: #6a6a6a;
+$sucess: #2ec64d;
 
 body {
-    font-family : 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-.gu-mirror {
-    position: fixed !important;
-  
-    opacity: 0.8;
-  
-    pointer-events: none;
-  }
 
-  .gu-unselectable {
+.gu-mirror {
+  position: fixed !important;
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+
+//   .gu-unselectable {
 //     -webkit-user-select: none !important;
 //     -moz-user-select: none !important;
 //     -ms-user-select: none !important;
 //     user-select: none !important;
-//   
+
+// }
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
 }
-  /* added to the source element while its mirror is dragged */
-  .gu-transit {
-    opacity: 0.2;
-    
-  }
 
-
-  html{
-    font-size: 16px;
-  }
+html {
+  font-size: 16px;
+}

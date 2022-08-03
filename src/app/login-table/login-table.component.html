@@ -80,19 +80,25 @@
         </div>
       </form>
     </div>
+
+
+
     <div
-      class="remember-password d-flex justify-content-between align-items-center"
+      class="remember-password row d-flex justify-content-between align-items-center"
     >
-      <div class="form-check d-flex align-items-center">
-        <form action="" class="d-flex align-items-center">
+      <div class="formcheck d-flex align-items-center col-sm-7  col-12">
+        <form action="" class="d-flex align-items-baseline">
           <input type="checkbox" id="remember" clas />
           <label for="remember"> Remember my username</label>
         </form>
       </div>
 
-      <div class="forget-password">Forgot Password ?</div>
+      <div class="forget-password text-sm-end text-start col-sm-5 col-12 pt-2 pt-sm-0">Forgot Password ?</div>
     </div>
-    <div class="pt-4">
+
+
+
+    <div class="pt-sm-4 pt-2">
       <button class="button" type="submit" (click)="onSubmit()">
         <div routerLink="/data">Login</div>
       </button>

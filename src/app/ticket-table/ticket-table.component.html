@@ -6,10 +6,10 @@
         class="row d-flex justify-content-between align-items-center pt-5 tablehead pb-3"
       >
         <div class="col-6">Ticket Name</div>
-        <div class="col text-end">Due Date</div>
-        <div class="col text-end">Priority</div>
+        <div class="col-2 text-end">Due Date</div>
+        <div class="col-2 text-end">Priority</div>
 
-        <div class="col text-end">Assignee</div>
+        <div class="col-2 text-end ">Assignee</div>
       </div>
       <div
         class="row d-flex pt-2 pb-2 justify-content-between align-items-center tablebody mb-1"
@@ -19,7 +19,7 @@
           <div
             class="name-container row d-flex justify-content-start align-items-baseline"
           >
-            <div class="col-1">
+            <div class="col-md-1 col-1">
               <div
                 class="circular"
                 [ngStyle]="{
@@ -34,13 +34,13 @@
                 }"
               ></div>
             </div>
-            <div class="name col-11">{{ value.name }}</div>
+            <div class="name col-md-11 col-10">{{ value.name }}</div>
           </div>
         </div>
-        <div class="col text-end">{{ value.date }}</div>
+        <div class="col-2 col-lg text-end">{{ value.date }}</div>
 
         <div
-          class="col text-end"
+          class="col-2 col-lg text-end"
           [ngStyle]="{
             color: value.Priority === 'High' ? '#C91717' : '#126C9C'
           }"
@@ -48,7 +48,7 @@
           {{ value.Priority }}
         </div>
 
-        <div class="col text-end">{{ value.Priority }}</div>
+        <div class="col-2 col-lg text-end">{{ value.Priority }}</div>
       </div>
     </div>
   </div>

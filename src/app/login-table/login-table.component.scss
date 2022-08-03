@@ -23,12 +23,12 @@
 }
 
 label {
-    font-size: 16px;
+    font-size: 1rem;
     color: #BEBEBE;
 
 }
 
-form:focus-within label {
+.form-start form:focus-within label {
 
     color: $black;
 }
@@ -44,7 +44,7 @@ input {
     height: 45px;
     border-radius: 10px;
 
-    border: 0.8px solid #6A6A6A;
+    border: 0.8px solid #BEBEBE;
     text-indent: 5px;
 
     &::placeholder {
@@ -75,10 +75,12 @@ input[type="checkbox" i] {
     cursor: pointer;
 }
 
-.form-check label {
+.formcheck label {
     font-size: 12px;
     text-indent: 2px;
     color: $black;
+    // padding-left: 0;
+
 
 }
 

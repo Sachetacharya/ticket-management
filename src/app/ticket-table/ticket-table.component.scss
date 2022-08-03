@@ -17,6 +17,8 @@
 
 .tablehead {
     font-size: 14px;
+    font-size: clamp(0.625rem, 2.5vw, 0.875rem);
+    // overflow: scroll;
 }
 
 .circular {
@@ -28,4 +30,18 @@
 .tablebody{
     background-color: #FFFFFF;
     border-radius: 2px;
+    font-size: clamp(0.625rem, 1.5vw, 0.875rem);
+
+}
+@media only screen and (max-width: 522px){
+    .circular {
+        height: 8px;
+        width: 8px;}
+
+}
+@media only screen and (max-width: 491){
+    .circular {
+        height: 6px;
+        width: 6px;}
+
 }

@@ -43,7 +43,7 @@
 
 .date{
     color: #6A6A6A;
-font-size: 10px;
+font-size: 0.625rem;
 }
 .open-button{
     height: 40px;
@@ -62,26 +62,26 @@ font-size: 10px;
 }
 .heading{
     color: $black;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
 }
 .project{
     color: $black;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .dummy{
     color: $unnamed;
-    font-size: 12px;
+    font-size: 0.75rem;
     word-spacing: 0.04cm;
 }
 .see{
     float:right;
     color: $lightblue;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .attach{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
 }
 .all{
@@ -90,10 +90,10 @@ font-size: 10px;
 }
 .name{
     color: $black;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 .data{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: $black;
     img{
         height: 50px;
@@ -101,7 +101,7 @@ font-size: 10px;
     }
 }
 .min{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: $black;
 }
 .by{
@@ -148,7 +148,7 @@ form:focus-within label {
 }
 .right-description{
     color: $unnamed;
-    font-size: 14px;
+    font-size: 0.875rem;
     background-color: #FBFBFB;
     height: 100%;
     border-left: 1px solid  #BEBEBE;

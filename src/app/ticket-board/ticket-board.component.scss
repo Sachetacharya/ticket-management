@@ -14,7 +14,7 @@ $colors: #d3d3d3, #4194f6, #a875ff, #6BC950;
         border-right: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-radius: 5px;
-        font-size: calc(14 / 16)px;
+        font-size: 0.875rem;
 
 
     }
@@ -88,7 +88,7 @@ input:checked::before {
 //     background-color: gray;
 // }
 .toptext {
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 500;
 }
 
@@ -96,13 +96,11 @@ input:checked::before {
 .side,
 .client,
 .date,.ticketid ,.icon {
-    font-size: 10px;
+    font-size: 0.625rem;
     color: $black;
 }
 
-// .side{
-//     font-size: 10px;
-// }
+
 hr{
     color: #E4E4E4;
 }
