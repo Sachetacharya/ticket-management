@@ -16,6 +16,7 @@ import { TicketBoardComponent } from './ticket-board/ticket-board.component';
 import { TicketTableComponent } from './ticket-table/ticket-table.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { DragulaModule } from 'ng2-dragula';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -34,6 +35,7 @@ import { DragulaModule } from 'ng2-dragula';
     TicketBoardComponent,
     TicketTableComponent,
     TicketListComponent,
+    LogoutComponent,
    
    
   ],
