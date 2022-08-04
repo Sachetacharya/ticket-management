@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DragulaService } from 'ng2-dragula'
+import { DragulaService } from 'ng2-dragula';
 import { Ticketvalue } from '../tickectsvalue';
 import { Ticket } from '../ticket';
-
 
 @Component({
   selector: 'app-ticket-board',
@@ -10,14 +9,11 @@ import { Ticket } from '../ticket';
   styleUrls: ['./ticket-board.component.scss'],
 })
 export class TicketBoardComponent implements OnInit {
-    constructor(private dragulaService: DragulaService) {
-}
+  constructor(private dragulaService: DragulaService) {}
   ticketvalue = Ticket;
   tickets = Ticketvalue;
 
   openTickets = Ticketvalue.filter((n) => n.ticket == 'open');
-
- 
 
   progressTickets = Ticketvalue.filter((n) => n.ticket == 'progress');
 
@@ -25,7 +21,6 @@ export class TicketBoardComponent implements OnInit {
 
   closedTickets = Ticketvalue.filter((n) => n.ticket == 'Close');
 
-  
   ngOnInit(): void {
     // console.log(this.reviewTickets);
 
